@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胜华电缆科技（哈尔滨）股份有限公司 - 2026年奖补项目申报清单</title>
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --primary-light: #2d5f8a;
+            --accent: #e8943a;
+            --accent-light: #f5b971;
+            --bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #6c7a89;
+            --border: #dce3ec;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #3498db;
+            --danger: #e74c3c;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .header h1 span {
+            color: var(--accent-light);
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 12px;
+        }
+        .header-meta {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+        .nav {
+            background: var(--primary);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+        .nav a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            padding: 14px 22px;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .nav a:hover, .nav a.active {
+            color: white;
+            background: rgba(255,255,255,0.05);
+            border-bottom-color: var(--accent);
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 40px 60px;
+        }
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 120px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .card p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 22px 26px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+        }
+        .info-item .label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .info-item .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .badge-national {
+            background: linear-gradient(135deg, #e74c3c22, #e74c3c11);
+            color: #c0392b;
+            border: 1px solid #e74c3c44;
+        }
+        .badge-province {
+            background: linear-gradient(135deg, #3498db22, #3498db11);
+            color: #2471a3;
+            border: 1px solid #3498db44;
+        }
+        .badge-city {
+            background: linear-gradient(135deg, #27ae6022, #27ae6011);
+            color: #1e8449;
+            border: 1px solid #27ae6044;
+        }
+        .badge-other {
+            background: linear-gradient(135deg, #8e44ad22, #8e44ad11);
+            color: #6c3483;
+            border: 1px solid #8e44ad44;
+        }
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+        .biz-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .biz-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        .biz-card .biz-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+        .biz-card h4 {
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .biz-card p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            background: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 1600px;
+        }
+        thead th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        tbody tr:hover {
+            background: #f0f5ff;
+        }
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .level-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .level-national { background: #fde8e8; color: #c0392b; }
+        .level-province { background: #e8f0fe; color: #2471a3; }
+        .level-city { background: #e8f8e8; color: #1e8449; }
+        .level-district { background: #f3e8fd; color: #6c3483; }
+        .amount {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 15px;
+        }
+        .category-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            background: #f0f0f0;
+            color: #555;
+        }
+        .tech-tag {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            background: #e8f4fd;
+            color: #2471a3;
+            margin: 1px 2px;
+            white-space: nowrap;
+        }
+        .tech-tag.ai { background: #fde8f4; color: #c0392b; }
+        .tech-tag.hw { background: #e8fde8; color: #1e8449; }
+        .tech-tag.sw { background: #f3e8fd; color: #6c3483; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .stat-card .stat-num {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent), var(--primary));
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            padding: 18px 24px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 24px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-item .year {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .timeline-item h4 {
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .timeline-item p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        .status-done {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            background: #27ae6022;
+            color: #27ae60;
+            font-weight: 600;
+        }
+        .status-progress {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            background: #f39c1222;
+            color: #f39c12;
+            font-weight: 600;
+        }
+        .policy-ref a {
+            color: var(--info);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--info);
+            font-size: 13px;
+            transition: all 0.2s;
+            word-break: break-all;
+        }
+        .policy-ref a:hover {
+            color: var(--primary);
+            border-bottom-style: solid;
+        }
+        .policy-card a {
+            color: var(--info);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--info);
+            transition: all 0.2s;
+        }
+        .policy-card a:hover {
+            color: var(--primary);
+            border-bottom-style: solid;
+        }
+        .ext-icon {
+            display: inline-block;
+            font-size: 10px;
+            margin-left: 2px;
+            opacity: 0.6;
+        }
+        .roadmap {
+            margin-top: 24px;
+        }
+        .roadmap-quarter {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            align-items: flex-start;
+        }
+        .roadmap-label {
+            min-width: 72px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+            padding-top: 6px;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            padding: 8px 4px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .roadmap-items {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .roadmap-item {
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid;
+            line-height: 1.5;
+            max-width: 280px;
+        }
+        .roadmap-item.national { background: #fde8e811; border-color: #e74c3c44; color: #c0392b; }
+        .roadmap-item.province { background: #e8f0fe11; border-color: #3498db44; color: #2471a3; }
+        .roadmap-item.city { background: #e8f8e811; border-color: #27ae6044; color: #1e8449; }
+        .roadmap-item.district { background: #f3e8fd11; border-color: #8e44ad44; color: #6c3483; }
+        .unit-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .unit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .unit-card .unit-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .unit-card .unit-count {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .unit-card .unit-desc {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+        .lifecycle-bar {
+            margin-top: 20px;
+            padding: 20px 24px;
+            background: #f8f9fc;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        .lifecycle-bar h4 {
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .lifecycle-steps {
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+        .lifecycle-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 0 4px;
+        }
+        .lifecycle-step .bar {
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .lifecycle-step:nth-child(1) .bar { background: #3498db; }
+        .lifecycle-step:nth-child(2) .bar { background: #9b59b6; }
+        .lifecycle-step:nth-child(3) .bar { background: #27ae60; }
+        .lifecycle-step:nth-child(4) .bar { background: #e74c3c; }
+        .lifecycle-step .step-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .lifecycle-step .step-pct {
+            font-size: 18px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-bar {
+            margin-top: 20px;
+            padding: 16px 28px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .contact-bar-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+            padding-right: 12px;
+            border-right: 2px solid var(--border);
+        }
+        .contact-bar-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        .contact-bar-info {
+            font-size: 13px;
+            color: var(--text);
+        }
+        .contact-bar-info .cb-label {
+            color: var(--text-light);
+            margin-right: 4px;
+        }
+        .contact-bar-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .contact-bar-info a:hover {
+            color: var(--accent);
+        }
+        .contact-bar-sep {
+            width: 1px;
+            height: 28px;
+            background: var(--border);
+        }
+        .collapse-group {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 2px dashed var(--border);
+        }
+        .collapse-group-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .collapse-section {
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--card-bg);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .collapse-section summary {
+            padding: 18px 28px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            list-style: none;
+            border-left: 4px solid var(--accent);
+            transition: background 0.2s;
+        }
+        .collapse-section summary::-webkit-details-marker { display: none; }
+        .collapse-section summary:hover { background: #f8f9fc; }
+        .collapse-section summary::before {
+            content: '\25B6';
+            font-size: 12px;
+            color: var(--accent);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .collapse-section[open] summary::before { transform: rotate(90deg); }
+        .collapse-section[open] summary {
+            border-bottom: 1px solid var(--border);
+            background: #f8f9fc;
+        }
+        .collapse-section .collapse-body {
+            padding: 24px 28px;
+            animation: fadeSlideIn 0.3s ease;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+        }
+        @media print {
+            .header, .nav, .filter-bar { position: static; }
+            .section { page-break-inside: avoid; }
+            .collapse-section { break-inside: avoid; }
+            .collapse-section[open] summary { break-after: avoid; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 16px; }
+            .header-inner { padding: 16px; flex-direction: column; gap: 8px; }
+            .nav-inner { padding: 0 16px; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .info-grid { grid-template-columns: 1fr; }
+            .contact-bar { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .contact-bar-sep { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-inner">
+        <h1>胜华电缆科技（哈尔滨）股份有限公司 <span>2026年度奖补项目申报清单</span></h1>
+        <div class="header-meta">编制日期：2026年7月1日 &nbsp;|&nbsp; 非上市民营企业</div>
+    </div>
+    <div class="nav">
+        <div class="nav-inner">
+            <a href="#projects" class="active">可申报项目清单</a>
+            <a href="#policy">政策依据汇总</a>
+            <a href="#tips">重要提示</a>
+            <a href="#company">企业详情 &#9660;</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- ===== 1. 可申报项目清单 ===== -->
+    <div class="section" id="projects">
+        <div class="section-title">
+            <div class="icon">1</div>
+            2026年可申报奖补项目清单
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-num">10</div>
+                <div class="stat-label">可申报项目总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">940~2,300</div>
+                <div class="stat-label">预计奖补总额（万元）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">2</div>
+                <div class="stat-label">国家级项目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">8</div>
+                <div class="stat-label">省/市/区级项目</div>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterTable('all')">全部</button>
+            <button class="filter-btn" onclick="filterTable('national')">国家级</button>
+            <button class="filter-btn" onclick="filterTable('province')">省级</button>
+            <button class="filter-btn" onclick="filterTable('city')">市级</button>
+            <button class="filter-btn" onclick="filterTable('district')">区级</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="projectTable">
+                <thead>
+                    <tr>
+                        <th style="width:40px">序号</th>
+                        <th style="min-width:180px">可申报项目名称</th>
+                        <th style="min-width:100px">项目类别</th>
+                        <th style="min-width:110px">归口部门</th>
+                        <th style="min-width:80px">申报层级</th>
+                        <th style="min-width:80px">申报周期</th>
+                        <th style="min-width:100px">预计奖补金额（万元）</th>
+                        <th style="min-width:120px">关键技术方向</th>
+                        <th style="min-width:220px">申报核心条件</th>
+                        <th style="min-width:200px">所需材料</th>
+                        <th style="min-width:200px">政策依据（官方文件）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 国家级 -->
+                    <tr data-level="national">
+                        <td>1</td>
+                        <td><strong>重点新材料首批次应用保险补偿</strong></td>
+                        <td><span class="category-tag">保险补偿</span></td>
+                        <td>工业和信息化部</td>
+                        <td><span class="level-tag level-national">国家级</span></td>
+                        <td>Q1-Q2（3-5月）</td>
+                        <td class="amount">保费80%补偿</td>
+                        <td>
+                            <span class="tech-tag hw">新型电缆材料</span>
+                            <span class="tech-tag">特种电缆</span>
+                        </td>
+                        <td>产品列入《重点新材料首批次应用示范指导目录》，已投保首批次保险，产品具有创新性且非自用</td>
+                        <td>产品创新性说明、保险保单及保费缴纳凭证、产品销售合同、用户应用报告</td>
+                        <td class="policy-ref"><a href="https://www.miit.gov.cn/" target="_blank" rel="noopener">《重点新材料首批次应用保险补偿机制试点工作实施细则》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="national">
+                        <td>2</td>
+                        <td><strong>国家级绿色工厂认定</strong></td>
+                        <td><span class="category-tag">绿色制造</span></td>
+                        <td>工业和信息化部</td>
+                        <td><span class="level-tag level-national">国家级</span></td>
+                        <td>Q1-Q2（3-6月）</td>
+                        <td class="amount">50-200</td>
+                        <td>
+                            <span class="tech-tag hw">绿色生产</span>
+                            <span class="tech-tag">节能减排</span>
+                        </td>
+                        <td>企业环境管理规范化，单位产品能耗和污染物排放达行业先进水平，通过ISO14001环境管理体系认证，建立绿色供应链管理体系</td>
+                        <td>绿色工厂自评价报告、第三方评价报告、环境管理体系认证证书、近三年环保达标证明、能源审计报告</td>
+                        <td class="policy-ref"><a href="https://www.miit.gov.cn/" target="_blank" rel="noopener">《绿色工厂梯度培育及管理暂行办法》（工信部节能〔2024〕13号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <!-- 省级 -->
+                    <tr data-level="province">
+                        <td>3</td>
+                        <td><strong>省级数字化车间/智能工厂认定</strong></td>
+                        <td><span class="category-tag">智能制造</span></td>
+                        <td>省工信厅</td>
+                        <td><span class="level-tag level-province">省级</span></td>
+                        <td>Q1-Q2（3-5月）</td>
+                        <td class="amount">100-1,000</td>
+                        <td>
+                            <span class="tech-tag ai">智能制造</span>
+                            <span class="tech-tag sw">数字化车间</span>
+                        </td>
+                        <td>规模以上制造业企业，在黑龙江注册且成立超2年（2021年成立满足），按项目合同金额10%给予一次性补助。数字化车间最高200万元，智能工厂最高1000万元</td>
+                        <td>数字化车间/智能工厂建设方案、项目合同及投资证明、信息化系统部署报告、设备联网率证明、实施效果评估报告</td>
+                        <td class="policy-ref"><a href="http://gxt.hlj.gov.cn/" target="_blank" rel="noopener">《黑龙江省制造业企业数字化车间（生产线）及智能工厂补助政策实施细则（修订版）》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="province">
+                        <td>4</td>
+                        <td><strong>企业技术改造和设备更新贴息</strong></td>
+                        <td><span class="category-tag">技改贴息</span></td>
+                        <td>省工信厅/财政厅</td>
+                        <td><span class="level-tag level-province">省级</span></td>
+                        <td>全年可申报</td>
+                        <td class="amount">100-2,500</td>
+                        <td>
+                            <span class="tech-tag hw">设备升级</span>
+                            <span class="tech-tag sw">数字化转型</span>
+                        </td>
+                        <td>制造业企业实施技术改造项目，投资500万元以上。按LPR贴息12个月，最高800万元；超2亿元项目贴息24个月，最高2500万元。智改数转项目翻倍支持，设备更新追加10%（最高1000万元）</td>
+                        <td>项目备案/核准文件、环评批复、设备采购合同、银行贷款合同及放款凭证、项目实施方案</td>
+                        <td class="policy-ref"><a href="https://www.harbin.gov.cn/haerbin/c106821/202506/c01_1062833.shtml" target="_blank" rel="noopener">《黑龙江省支持企业技术改造和工业领域设备更新奖补政策》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="province">
+                        <td>5</td>
+                        <td><strong>省级专精特新中小企业认定</strong></td>
+                        <td><span class="category-tag">企业认定</span></td>
+                        <td>省工信厅</td>
+                        <td><span class="level-tag level-province">省级</span></td>
+                        <td>Q2（4-6月）</td>
+                        <td class="amount">30-50</td>
+                        <td>
+                            <span class="tech-tag">专业化</span>
+                            <span class="tech-tag">创新能力</span>
+                        </td>
+                        <td>连续经营2年以上，营收不低于1000万元，研发投入占比不低于3%，拥有自主知识产权。升级为国家级可追加奖励</td>
+                        <td>企业法人证照、近两年审计报告、研发投入证明、专利证书、主营业务收入证明</td>
+                        <td class="policy-ref"><a href="http://gxt.hlj.gov.cn/" target="_blank" rel="noopener">《黑龙江省优质中小企业梯度培育管理实施细则》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <!-- 市级 -->
+                    <tr data-level="city">
+                        <td>6</td>
+                        <td><strong>哈尔滨市重点科技计划项目</strong></td>
+                        <td><span class="category-tag">科技攻关</span></td>
+                        <td>市科技局</td>
+                        <td><span class="level-tag level-city">市级</span></td>
+                        <td>Q2（4-6月）</td>
+                        <td class="amount">30-100</td>
+                        <td>
+                            <span class="tech-tag hw">新材料</span>
+                            <span class="tech-tag">高端装备制造</span>
+                        </td>
+                        <td>哈尔滨市注册企业，具有明确的技术研发方向和产业化前景，有产学研合作基础，研发投入有保障。优先支持新材料、高端装备制造等方向</td>
+                        <td>项目申报书、技术路线图、产学研合作协议（哈理工）、经费预算及匹配资金证明、前期研发成果证明</td>
+                        <td class="policy-ref"><a href="https://kyy.nefu.edu.cn/info/1031/4287.htm" target="_blank" rel="noopener">《关于加快推动哈尔滨市制造业高质量发展实现工业强市若干政策措施》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="city">
+                        <td>7</td>
+                        <td><strong>哈尔滨市企业技术中心认定</strong></td>
+                        <td><span class="category-tag">平台认定</span></td>
+                        <td>市工信局</td>
+                        <td><span class="level-tag level-city">市级</span></td>
+                        <td>Q2（5-7月）</td>
+                        <td class="amount">30-50</td>
+                        <td>
+                            <span class="tech-tag">技术创新</span>
+                            <span class="tech-tag">产学研合作</span>
+                        </td>
+                        <td>具有健全的技术中心组织体系，年度研发投入不低于营收的3%，专职研发人员不少于15人。认定为省级技术中心的前置条件</td>
+                        <td>技术中心工作报告、研发设备清单、产学研合作协议（哈理工合作）、知识产权清单</td>
+                        <td class="policy-ref"><a href="https://www.harbin.gov.cn/haerbin/c106823/202512/c01_1097149.shtml" target="_blank" rel="noopener">《哈尔滨市企业技术中心认定管理办法》（哈工信规〔2025〕1号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="city">
+                        <td>8</td>
+                        <td><strong>制造业新型技术改造城市试点项目</strong></td>
+                        <td><span class="category-tag">技改示范</span></td>
+                        <td>市工信局</td>
+                        <td><span class="level-tag level-city">市级</span></td>
+                        <td>Q1、Q3</td>
+                        <td class="amount">100-500</td>
+                        <td>
+                            <span class="tech-tag hw">高端化改造</span>
+                            <span class="tech-tag sw">数字化升级</span>
+                        </td>
+                        <td>哈尔滨市制造业企业，有明确的技术改造方案且投资额达到规定标准，项目具有示范带动效应</td>
+                        <td>技术改造方案、设备投资明细、项目实施计划、预期效益分析报告</td>
+                        <td class="policy-ref"><a href="https://www.harbin.gov.cn/haerbin/c106823/202604/c01_1122847.shtml" target="_blank" rel="noopener">哈尔滨市制造业新型技术改造城市试点中央奖补资金项目<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="city">
+                        <td>9</td>
+                        <td><strong>两化融合贯标奖励</strong></td>
+                        <td><span class="category-tag">贯标认证</span></td>
+                        <td>市工信局</td>
+                        <td><span class="level-tag level-city">市级</span></td>
+                        <td>全年</td>
+                        <td class="amount">50</td>
+                        <td>
+                            <span class="tech-tag sw">信息化融合</span>
+                            <span class="tech-tag">管理体系</span>
+                        </td>
+                        <td>完成两化融合管理体系贯标并通过评定，获得两化融合管理体系评定证书</td>
+                        <td>两化融合管理体系贯标认证证书、信息化建设方案及实施案例</td>
+                        <td class="policy-ref"><a href="https://www.shangyexinzhi.com/article/4271541.html" target="_blank" rel="noopener">哈尔滨市两化融合贯标奖励政策<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <!-- 区级 -->
+                    <tr data-level="district">
+                        <td>10</td>
+                        <td><strong>哈尔滨新区工业投资奖励</strong></td>
+                        <td><span class="category-tag">投资奖励</span></td>
+                        <td>哈尔滨新区管委会</td>
+                        <td><span class="level-tag level-district">区级</span></td>
+                        <td>Q2（4-6月）</td>
+                        <td class="amount">投资额2%（上限200）</td>
+                        <td>
+                            <span class="tech-tag hw">工业投资</span>
+                            <span class="tech-tag">产能扩建</span>
+                        </td>
+                        <td>在新区完成工业投资500万元以上，符合新区产业规划要求。获得补贴后五年内不得迁出，否则退回资金</td>
+                        <td>投资项目备案证明、固定资产投资审计报告、项目竣工验收文件</td>
+                        <td class="policy-ref"><a href="https://city.sina.cn/finance/2024-05-29/detail-inawwxwy5529010.d.html" target="_blank" rel="noopener">《哈尔滨新区关于加快推动工业高质量发展政策措施》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 申报规划路线图 -->
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#128197; 申报规划路线图（按时间窗口）</h3>
+            <div class="roadmap">
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q1<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">1-3月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9312;</strong> 重点新材料首批次保险补偿<br><span style="opacity:0.7">Q1-Q2 | 工信部</span></div>
+                        <div class="roadmap-item national"><strong>&#9313;</strong> 国家级绿色工厂认定<br><span style="opacity:0.7">Q1-Q2 | 工信部</span></div>
+                        <div class="roadmap-item province"><strong>&#9314;</strong> 数字化车间/智能工厂认定<br><span style="opacity:0.7">Q1-Q2 | 省工信厅</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q2<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">4-6月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item province"><strong>&#9316;</strong> 省级专精特新认定<br><span style="opacity:0.7">Q2 | 省工信厅</span></div>
+                        <div class="roadmap-item city"><strong>&#9317;</strong> 重点科技计划项目<br><span style="opacity:0.7">Q2 | 市科技局</span></div>
+                        <div class="roadmap-item city"><strong>&#9318;</strong> 企业技术中心认定（市级）<br><span style="opacity:0.7">Q2 | 市工信局</span></div>
+                        <div class="roadmap-item district"><strong>&#9321;</strong> 新区工业投资奖励<br><span style="opacity:0.7">Q2 | 新区管委会</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q3<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">7-9月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item city"><strong>&#9319;</strong> 制造业技改试点（第二轮）<br><span style="opacity:0.7">Q3 | 市工信局</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">全年<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">持续</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item province"><strong>&#9315;</strong> 技术改造和设备更新贴息<br><span style="opacity:0.7">全年 | 省工信厅</span></div>
+                        <div class="roadmap-item city"><strong>&#9323;</strong> 两化融合贯标奖励<br><span style="opacity:0.7">全年 | 市工信局</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 归口部门项目分布 -->
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#127970; 归口部门项目分布</h3>
+            <div class="unit-summary">
+                <div class="unit-card">
+                    <div class="unit-name">工信部门（国家/省/市）</div>
+                    <div class="unit-count">7</div>
+                    <div class="unit-desc">新材料保险补偿、数字化车间/智能工厂、技改贴息、专精特新认定、企业技术中心认定、技改试点、两化融合</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">科技部门（国家/市）</div>
+                    <div class="unit-count">2</div>
+                    <div class="unit-desc">绿色工厂认定、重点科技计划项目</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">哈尔滨新区管委会</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">工业投资奖励</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 2. 政策依据汇总 ===== -->
+    <div class="section" id="policy">
+        <div class="section-title">
+            <div class="icon">2</div>
+            政策依据汇总
+        </div>
+
+        <div class="card policy-card">
+            <h3>国家级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://www.miit.gov.cn/" target="_blank" rel="noopener">《重点新材料首批次应用保险补偿机制试点工作实施细则》<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://www.miit.gov.cn/" target="_blank" rel="noopener">《绿色工厂梯度培育及管理暂行办法》（工信部节能〔2024〕13号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>3.</strong> <a href="https://m.sohu.com/a/998538433_121106842" target="_blank" rel="noopener">《关于2026年实施大规模设备更新和消费品以旧换新政策的通知》<span class="ext-icon">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>黑龙江省级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="http://gxt.hlj.gov.cn/" target="_blank" rel="noopener">《黑龙江省制造业企业数字化车间（生产线）及智能工厂补助政策实施细则（修订版）》<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://finance.sina.cn/2026-03-01/detail-inhpmqrv5813330.d.html" target="_blank" rel="noopener">《黑龙江省支持企业技术改造和工业领域设备更新奖补政策》<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>3.</strong> <a href="http://gxt.hlj.gov.cn/" target="_blank" rel="noopener">《黑龙江省优质中小企业梯度培育管理实施细则》<span class="ext-icon">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>哈尔滨市/哈尔滨新区级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://kyy.nefu.edu.cn/info/1031/4287.htm" target="_blank" rel="noopener">《关于加快推动哈尔滨市制造业高质量发展实现工业强市若干政策措施》<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://www.harbin.gov.cn/haerbin/c106823/202512/c01_1097149.shtml" target="_blank" rel="noopener">《哈尔滨市企业技术中心认定管理办法》（哈工信规〔2025〕1号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>3.</strong> <a href="https://www.harbin.gov.cn/haerbin/c106823/202604/c01_1122847.shtml" target="_blank" rel="noopener">哈尔滨市制造业新型技术改造城市试点中央奖补资金项目<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>4.</strong> <a href="https://www.shangyexinzhi.com/article/4271541.html" target="_blank" rel="noopener">哈尔滨市两化融合贯标奖励政策<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>5.</strong> <a href="https://city.sina.cn/finance/2024-05-29/detail-inawwxwy5529010.d.html" target="_blank" rel="noopener">《哈尔滨新区关于加快推动工业高质量发展政策措施》<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>6.</strong> <a href="https://www.harbin.gov.cn/haerbin/c106821/202506/c01_1062833.shtml" target="_blank" rel="noopener">《哈尔滨市落实省级企业技术改造和工业领域设备更新奖补政策实施细则》（哈工信联规〔2025〕2号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 3. 重要提示 ===== -->
+    <div class="section" id="tips">
+        <div class="card" style="background: #fffbeb; border-color: #f5deb3;">
+            <h3 style="color: #b8860b;">&#9888;&#65039; 重要提示</h3>
+            <p style="font-size: 13px; color: #8b7355; margin-top: 8px;">
+                本清单所列信息基于公开资料整理，仅供参考。具体申报条件、奖补金额和时间节点以各级主管部门发布的最新官方文件为准。建议企业密切关注黑龙江省工业和信息化厅、黑龙江省科技厅、哈尔滨市工信局、哈尔滨市科技局、哈尔滨新区管委会等部门的年度申报通知，提前做好材料准备。预计奖补金额可能因政策调整而变化，部分项目奖补金额需根据实际投资额计算。
+            </p>
+            <div class="lifecycle-bar">
+                <h4>&#128203; 项目申报全生命周期</h4>
+                <div class="lifecycle-steps">
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">项目申报</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">评审批复</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">资金下达</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step" style="flex: 2;">
+                        <div class="bar"></div>
+                        <div class="step-label">结项验收</div>
+                        <div class="step-pct">40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-bar">
+            <div class="contact-bar-title">&#128222; 项目咨询联系人</div>
+            <div class="contact-bar-name">赵璐红</div>
+            <div class="contact-bar-info">
+                <span class="cb-label">舍得酒业</span> &middot; 公共事务部总经理
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">电话</span> <a href="tel:18884606786">18884606786</a>
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">地址</span> 四川省成都市武侯区复地复城国际T1
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 折叠面板区域：企业背景信息 ===== -->
+    <div class="collapse-group" id="company">
+        <div class="collapse-group-title">&#9660; 企业详情（点击展开） &#9660;</div>
+
+        <details class="collapse-section">
+            <summary>&#127970; 企业概述</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>胜华电缆科技（哈尔滨）股份有限公司是上海胜华电缆科技集团的核心控股子公司，坐落于哈尔滨经济技术开发区哈南工业新城。公司成立于2021年，注册资本3亿元，主营电线电缆制造、建设工程施工等业务。作为胜华电缆集团在东北地区的重要生产基地，公司在黑龙江深耕超过12年，累计投资超30亿元，建设了现代化电缆生产基地和特高压电缆产业园。公司拥有16项专利（其中发明专利9项），研发20余种高新技术电缆产品，2022年东北地区销售额达20亿元。公司先后荣获"2023-2024中国电线电缆领军品牌""中国建筑用电线电缆十大品牌"等荣誉，并与哈尔滨理工大学建立了深度校企合作关系，持续推动技术创新和产业升级。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="label">企业全称</div>
+                        <div class="value">胜华电缆科技（哈尔滨）股份有限公司</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">法定代表人</div>
+                        <div class="value">潘永利</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">注册资本</div>
+                        <div class="value">30,000万元（3亿元）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">成立日期</div>
+                        <div class="value">2021年10月28日</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">注册地址</div>
+                        <div class="value">哈尔滨经开区哈南工业新城</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">企业类型</div>
+                        <div class="value">股份有限公司（非上市）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">员工规模</div>
+                        <div class="value">100-499人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">控股股东</div>
+                        <div class="value">上海胜华电缆科技集团（持股98%）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">年营业收入</div>
+                        <div class="value">约20亿元（2022年东北区域）</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#9881; 主营业务</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>公司主要从事电线电缆的研发、制造和销售，产品覆盖电力电缆、特种电缆、通信电缆、控制电缆等多个品类，广泛应用于电力、交通、建筑、通信、石油化工等领域。公司依托哈尔滨理工大学等高校的科研资源，持续推动高端电缆产品研发和智能制造升级，已建成多条现代化生产线和特高压电缆产业园。</p>
+                </div>
+                <div class="biz-grid">
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8fde8;">&#9889;</div>
+                        <h4>电力电缆</h4>
+                        <p>高低压电力电缆、交联聚乙烯绝缘电缆，广泛应用于城市配电网和工业供电系统</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #fde8e8;">&#128293;</div>
+                        <h4>特种电缆</h4>
+                        <p>耐火电缆、阻燃电缆、耐高温电缆、海底电缆等，满足极端环境和特殊工况需求</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8f0fd;">&#128225;</div>
+                        <h4>通信电缆</h4>
+                        <p>光纤光缆、数据通信电缆，服务于5G基站建设和数据中心基础设施</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #f3e8fd;">&#128736;</div>
+                        <h4>控制电缆</h4>
+                        <p>计算机电缆、仪表电缆、控制信号电缆，用于工业自动化和智能控制系统</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #fff8e8;">&#127758;</div>
+                        <h4>特高压电缆</h4>
+                        <p>超高压和特高压输电电缆，配套新建特高压产业园，瞄准国家新型电力系统建设</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8fdf3;">&#127959;</div>
+                        <h4>建设工程</h4>
+                        <p>房屋建筑和市政基础设施工程总承包、建设工程施工、建筑劳务分包</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#127942; 已获得的资质与荣誉</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <h3>国家级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-national">&#127942; 国家高新技术企业（2024年认定，证书编号GR202423001353）</span>
+                        <span class="badge badge-national">&#127942; 2023-2024中国电线电缆领军品牌</span>
+                        <span class="badge badge-national">&#127942; 中国建筑用电线电缆十大品牌</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>省级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-province">&#127941; 黑龙江省规模以上工业企业</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>市级及其他资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-city">&#127941; A级纳税人（2025年度）</span>
+                        <span class="badge badge-city">&#127941; 哈尔滨理工大学校企合作基地</span>
+                        <span class="badge badge-city">&#127941; 国家电线电缆行业大型综合性骨干企业成员</span>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#128203; 近三年重大事项（2024-2026）</summary>
+            <div class="collapse-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2025年</div>
+                        <h4>获认定国家高新技术企业</h4>
+                        <p>2月28日，经黑龙江省认定机构2024年认定报备，正式获批高新技术企业资质，证书编号GR202423001353 <span class="status-done">已完成</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2025年</div>
+                        <h4>获评A级纳税人</h4>
+                        <p>企业纳税信用等级评定为A级，体现良好的税务合规管理 <span class="status-done">已完成</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2024年</div>
+                        <h4>特高压电缆产业园建设推进</h4>
+                        <p>新建特高压电缆产业园项目持续推进，规划产值目标百亿，助力公司产能升级 <span class="status-progress">进行中</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2024年</div>
+                        <h4>荣获中国电线电缆领军品牌</h4>
+                        <p>公司荣获"2023-2024中国电线电缆领军品牌"及"中国建筑用电线电缆十大品牌"等多项行业荣誉 <span class="status-done">已完成</span></p>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+
+</div>
+
+<div class="footer">
+    胜华电缆科技（哈尔滨）股份有限公司 &middot; 2026年度奖补项目申报清单 &middot; 仅供内部参考使用 &middot; 编制日期：2026年7月1日
+</div>
+
+<script>
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    function filterTable(level) {
+        const rows = document.querySelectorAll('#projectTable tbody tr');
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        rows.forEach(row => {
+            if (level === 'all' || row.dataset.level === level) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section, .collapse-group');
+        const navLinks = document.querySelectorAll('.nav a');
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    document.querySelector('.nav a[href="#company"]').addEventListener('click', function() {
+        setTimeout(() => {
+            document.querySelectorAll('.collapse-section').forEach(d => d.open = true);
+        }, 400);
+    });
+</script>
+
+</body>
+</html>
